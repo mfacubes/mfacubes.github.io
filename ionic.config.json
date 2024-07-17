@@ -1,0 +1,7 @@
+{
+  "name": "mfacubes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
