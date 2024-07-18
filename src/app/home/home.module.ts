@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { DeveloperProfilesComponent } from './components/developer-profiles/developer-profiles.component';
+import { ServicesComponent } from './components/services/services.component';
+import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
+import { SocialMediaLinksComponent } from './components/social-media-links/social-media-links.component';
 
 
 @NgModule({
@@ -14,6 +18,9 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage,DeveloperProfilesComponent,
+    ServicesComponent,
+    ContactDetailsComponent,
+    SocialMediaLinksComponent]
 })
 export class HomePageModule {}
