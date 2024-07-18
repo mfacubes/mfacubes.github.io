@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, signal, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  open = signal(false)
+  constructor() { }
 
-  constructor() {}
+  toggleMenu() {
+    this.open.update(v => !v)
+  }
 
+  scrolltoView(id: string) {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })
+    this.open.set(false)
+  }
 }

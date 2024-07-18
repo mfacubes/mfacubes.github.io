@@ -9,6 +9,7 @@ import { DeveloperProfilesComponent } from './components/developer-profiles/deve
 import { ServicesComponent } from './components/services/services.component';
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { SocialMediaLinksComponent } from './components/social-media-links/social-media-links.component';
+import { IntroComponent } from './components/intro/intro.component';
 
 
 @NgModule({
@@ -18,7 +19,10 @@ import { SocialMediaLinksComponent } from './components/social-media-links/socia
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,DeveloperProfilesComponent,
+  declarations: [
+    HomePage,
+    IntroComponent,
+    DeveloperProfilesComponent,
     ServicesComponent,
     ContactDetailsComponent,
     SocialMediaLinksComponent]

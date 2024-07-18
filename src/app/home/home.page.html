@@ -1,34 +1,60 @@
-<ion-header>
-  <ion-toolbar class="bg-gray-800 text-white">
-    <ion-title>MFA Cubes</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="w-full bg-gray-800 text-white p-4">
-    <nav class="flex justify-around">
+  <div class="w-full md:flex hidden items-center bg-gray-800 text-white p-4">
+    <ion-buttons class="p-2">
+      <img src="assets/icon.png" class="w-20 h-20 rounded-xl " />
+      <ion-title>MFA Cubes</ion-title>
+    </ion-buttons>
+    <nav class="flex grow justify-end text-lg gap-32 mr-20">
       <a href="#profiles" class="hover:text-yellow-500">Profiles</a>
       <a href="#services" class="hover:text-yellow-500">Services</a>
       <a href="#contact" class="hover:text-yellow-500">Contact</a>
       <a href="#social" class="hover:text-yellow-500">Social Media</a>
     </nav>
   </div>
-  
-  <section id="services" class="bg-gray-100 p-8">
+  <!-- mobile menu -->
+  <div class="md:hidden flex bg-gray-800 justify-between items-start px-2">
+    <ion-buttons class="p-2 text-white">
+      <img src="assets/icon.png" class="w-10 h-10 rounded-lg" />
+      <ion-title>MFA Cubes</ion-title>
+    </ion-buttons>
+    <ion-button (click)="toggleMenu()" class="z-30" shape="clear" color="light">
+      <ion-icon name="menu" size="large"></ion-icon>
+    </ion-button>
+
+    <div [ngClass]="{'menu-open':open(),'menu-close':!open()}"
+      class="absolute top-14 overflow-hidden left-0 w-full h-0 p-2 bg-gray-800 z-20">
+
+
+      <div class="flex flex-col items-center grow center text-lg gap-6 mt-3 text-white">
+        <div (click)="scrolltoView('profiles')" class="p-2 border cursor-pointer hover:bg-gray-200 hover:text-gray-700 border-gray-400 text-center rounded-3xl w-full">Profiles</div>
+        <div (click)="scrolltoView('services')" class="p-2 border cursor-pointer hover:bg-gray-200 hover:text-gray-700 border-gray-400 text-center rounded-3xl w-full">Services</div>
+        <div (click)="scrolltoView('contact')" class="p-2 border cursor-pointer hover:bg-gray-200 hover:text-gray-700 border-gray-400 text-center rounded-3xl w-full">Contact</div>
+        <div (click)="scrolltoView('social')" class="p-2 border cursor-pointer hover:bg-gray-200 hover:text-gray-700 border-gray-400 text-center rounded-3xl w-full">Social Media</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <section id="intro">
+    <app-intro></app-intro>
+  </section>
+
+  <section id="services">
     <app-services></app-services>
   </section>
-  
-  <section id="profiles" class="p-8">
+
+  <section id="profiles">
     <app-developer-profiles></app-developer-profiles>
   </section>
 
-  
 
-  <section id="contact" class="p-8">
+
+  <section id="contact">
     <app-contact-details></app-contact-details>
   </section>
 
-  <section id="social" class="bg-gray-100 p-8">
+  <section id="social">
     <app-social-media-links></app-social-media-links>
   </section>
 </ion-content>
