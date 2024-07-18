@@ -2036,6 +2036,11 @@
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-18.1.0.tgz#52c5b879a200be91e19b3bb823c603102e12e256"
   integrity sha512-J4ATDGq0AubLbP3DOFRjp0pDBvSgzjtiu5l1hGq3xf6AzVAEmZFlp2Ac2EykuK2r8XDnCVoLrxICJOXZWWzP2g==
 
+"@nguniversal/express-engine@7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-7.0.1.tgz#eff27353c3af35691852eb6e08181d425dbc0382"
+  integrity sha512-B4slbEGEPeTLp6RQBDc0ZASZZ2APhwiytM21XSrMAdcRMu6zWn1dcXwo46MMWL33751u9aUhorpVD4aL3Yfonw==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
