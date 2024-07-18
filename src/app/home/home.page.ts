@@ -10,23 +10,8 @@ export class HomePage {
   open = signal(false)
 
 
-  @ViewChild("services") services!: ElementRef<HTMLElement>;
-  @ViewChild("profiles") profiles!: ElementRef<HTMLElement>;
-  @ViewChild("contact") contact!: ElementRef<HTMLElement>;
-  @ViewChild("social") social!: ElementRef<HTMLElement>;
-  private observer: IntersectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Load your component here
-        const { target } = entry
-        if (!target.classList.contains("left-to-right")) target.classList.toggle("left-to-right", true)
-        // You can call a function to load your component
-      }
-    });
-  }, {
-    rootMargin: '0px',
-    threshold: 0.1
-  });
+  
+  
 
 
 
@@ -36,10 +21,7 @@ export class HomePage {
 
 
 
-    this.observer.observe(this.services.nativeElement)
-    this.observer.observe(this.profiles.nativeElement)
-    this.observer.observe(this.contact.nativeElement)
-    this.observer.observe(this.social.nativeElement)
+  
   }
 
   toggleMenu() {
