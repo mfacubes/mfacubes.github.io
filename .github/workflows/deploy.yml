@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger workflow on pushes to the main branch
+      - main # Trigger workflow on pushes to the main branch
 
 jobs:
   deploy:
@@ -11,18 +11,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'
+          node-version: "20"
       
+      - name: Install Ionic CLI
+        run: yarn global add @ionic/cli
+
       - name: Install dependencies
         run: yarn install
-      
-      - name: Build Ionic Angular app
-        run: npm run build -- --base-href=https://mfacubes.github.io/mfa/
-      
+
+      - name: Build project
+        run: ionic build --prod --base-href=https://mfacubes.github.io/mfa/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
