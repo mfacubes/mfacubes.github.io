@@ -29,6 +29,15 @@ jobs:
     - name: Build Ionic Angular app for production
       run: ionic build --prod
 
+    - name: Upload pages artifact
+      id: upload-artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        publish-dir: 'www'
+        artifact-name: 'my-site'
+        publish-location: 'gh-pages'
+  
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
