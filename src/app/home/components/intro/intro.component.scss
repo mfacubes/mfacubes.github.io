@@ -4,7 +4,7 @@
 
 .intro-container {
   @apply flex h-screen text-white bg-cover bg-center relative;
-  background-image: linear-gradient(to right, rgba(74, 144, 226, 0.7), rgba(144, 19, 254, 0.7)), url('./website.jpg');
+  background-image: linear-gradient(to right, rgba(74, 144, 226, 0.7), rgba(144, 19, 254, 0.7)), url('../../../../assets/images/website.jpg');
 }
 
 .content-wrapper {

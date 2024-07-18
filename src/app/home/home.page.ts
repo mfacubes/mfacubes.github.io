@@ -9,25 +9,9 @@ import { ServicesComponent } from './components/services/services.component';
 export class HomePage {
   open = signal(false)
 
+
   
-  @ViewChild("services") services!: ElementRef<HTMLElement>;
-  @ViewChild("profiles") profiles!: ElementRef<HTMLElement>;
-  @ViewChild("contact") contact!: ElementRef<HTMLElement>;
-  @ViewChild("social") social!: ElementRef<HTMLElement>;
-  private observer: IntersectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Load your component here
-        if (!entry.target.classList.contains("left-to-right")) {
-          entry.target.classList.toggle("left-to-right", true)
-        }
-        // You can call a function to load your component
-      }
-    });
-  }, {
-    rootMargin: '0px',
-    threshold: 0.1
-  });
+  
 
 
 
@@ -36,11 +20,8 @@ export class HomePage {
   ngAfterViewInit(): void {
 
 
+
     
-    this.observer.observe(this.services.nativeElement)
-    this.observer.observe(this.profiles.nativeElement)
-    this.observer.observe(this.contact.nativeElement)
-    this.observer.observe(this.social.nativeElement)
   }
 
   toggleMenu() {
@@ -48,7 +29,7 @@ export class HomePage {
   }
 
   scrolltoView(id: string) {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
     this.open.set(false)
   }
 }
