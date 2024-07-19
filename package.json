@@ -12,7 +12,8 @@
     "lint": "ng lint"
   },
   "engines": {
-    "packageManager": "yarn"
+    "packageManager": "yarn",
+    "node": ">=20.0.0"
   },
   "private": true,
   "dependencies": {
