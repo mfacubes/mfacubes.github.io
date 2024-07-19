@@ -11,7 +11,9 @@
     "test": "ng test",
     "lint": "ng lint"
   },
-  "packageManager": "yarn",
+  "engines": {
+    "packageManager": "yarn"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.0.0",
